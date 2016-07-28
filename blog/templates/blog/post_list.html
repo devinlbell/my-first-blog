@@ -4,8 +4,13 @@
 	</head>
 	<body>
 		<h2>Future post section</h2>
-			<p> Hi there!</p>
-			<p> This is what it means to create a web app Devin</p>
+			{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+			{% endfor %}
 	</body>
 	
 </html>
